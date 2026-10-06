@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-labelledby="t d">
+  <title id="t">Tranquil platform overview</title>
+  <desc id="d">Five platforms delivered from three codebases: a Flutter Mobile project for Android Mobile and iOS, a Flutter TV project with Android TV and Fire TV flavors, and a native SwiftUI project for Apple TV. All three share one product design.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050a16"/>
+      <stop offset="1" stop-color="#0c1a2e"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e6f4f7; }
+      .h { font-size: 26px; font-weight: 700; }
+      .k { font-size: 13px; fill: #7fd8e6; letter-spacing: 1.5px; font-weight: 700; }
+      .b { font-size: 16px; }
+      .s { font-size: 13px; fill: #a9c4cc; }
+      .t { font-size: 15px; font-weight: 700; }
+      .mob { fill: #0b2f3a; stroke: #22c7d9; stroke-width: 2; }
+      .tv  { fill: #36230f; stroke: #e8923a; stroke-width: 2; }
+      .atv { fill: #251a45; stroke: #9a7cf0; stroke-width: 2; }
+      .sh  { fill: #12253f; stroke: #5b8fd6; stroke-width: 2; }
+      .chip { fill: #0a1424; stroke-width: 1.5; }
+      .arrow { stroke: #5b8fd6; stroke-width: 2; fill: none; marker-end: url(#a); }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b8fd6"/></marker>
+  </defs>
+  <rect width="1200" height="640" rx="16" fill="url(#bg)"/>
+  <text x="40" y="52" class="h">Tranquil: five platforms, three codebases</text>
+  <text x="40" y="78" class="s">Each project is built for its input model and store; all three implement the same product design.</text>
+
+  <rect x="40" y="108" width="350" height="300" rx="12" class="mob"/>
+  <text x="60" y="138" class="k">FLUTTER · MOBILE PROJECT</text>
+  <text x="60" y="166" class="b">Portrait, touch-first</text>
+  <rect x="60" y="182" width="145" height="34" rx="17" class="chip" stroke="#22c7d9"/>
+  <text x="76" y="204" class="t">Android Mobile</text>
+  <rect x="215" y="182" width="80" height="34" rx="17" class="chip" stroke="#22c7d9"/>
+  <text x="236" y="204" class="t">iOS</text>
+  <text x="60" y="246" class="b">Background audio, lock-screen controls</text>
+  <text x="60" y="272" class="b">Ad mediation with remote kill switches</text>
+  <text x="60" y="298" class="b">Push notifications, 20 languages</text>
+  <text x="60" y="324" class="b">Play Billing and StoreKit, one provider</text>
+  <text x="60" y="350" class="b">Startup ad gate with a hard time cap</text>
+  <text x="60" y="388" class="s">Store: iOS verified, Android not supplied</text>
+
+  <rect x="425" y="108" width="350" height="300" rx="12" class="tv"/>
+  <text x="445" y="138" class="k">FLUTTER · TV PROJECT</text>
+  <text x="445" y="166" class="b">Landscape, remote-driven</text>
+  <rect x="445" y="182" width="130" height="34" rx="17" class="chip" stroke="#e8923a"/>
+  <text x="461" y="204" class="t">Android TV</text>
+  <rect x="585" y="182" width="100" height="34" rx="17" class="chip" stroke="#e8923a"/>
+  <text x="605" y="204" class="t">Fire TV</text>
+  <text x="445" y="246" class="b">Two Gradle flavors, two package IDs</text>
+  <text x="445" y="272" class="b">Play Billing or Amazon IAP, one interface</text>
+  <text x="445" y="298" class="b">Focus widgets and shared key helpers</text>
+  <text x="445" y="324" class="b">Unity Ads on Google build only</text>
+  <text x="445" y="350" class="b">Firebase off in the Amazon build</text>
+  <text x="445" y="388" class="s">Store: Android TV verified, Fire TV not supplied</text>
+
+  <rect x="810" y="108" width="350" height="300" rx="12" class="atv"/>
+  <text x="830" y="138" class="k">SWIFTUI · TVOS PROJECT</text>
+  <text x="830" y="166" class="b">Landscape, Siri Remote</text>
+  <rect x="830" y="182" width="120" height="34" rx="17" class="chip" stroke="#9a7cf0"/>
+  <text x="846" y="204" class="t">Apple TV</text>
+  <text x="830" y="246" class="b">Native tvOS focus engine</text>
+  <text x="830" y="272" class="b">StoreKit 2 with live prices</text>
+  <text x="830" y="298" class="b">Dual AVPlayer crossfade between clips</text>
+  <text x="830" y="324" class="b">Remote-press capture over video</text>
+  <text x="830" y="350" class="b">No ads in this app</text>
+  <text x="830" y="388" class="s">Store: on the App Store listing, tvOS 17+</text>
+
+  <path d="M215 408 L215 468" class="arrow"/>
+  <path d="M600 408 L600 468" class="arrow"/>
+  <path d="M985 408 L985 468" class="arrow"/>
+
+  <rect x="40" y="470" width="1120" height="130" rx="12" class="sh"/>
+  <text x="60" y="500" class="k">SHARED PRODUCT DESIGN</text>
+  <text x="60" y="530" class="b">23 ambient video scenes (8 free, 15 premium) · 6 looping sounds · 4 scene bundles · 5 themes</text>
+  <text x="60" y="558" class="b">Preset sleep timers (15 to 90 min on Mobile, up to 120 on TV) · favourites · default volume · audio-only mode</text>
+  <text x="60" y="586" class="b">One monthly subscription plus one-time unlocks · no account system on any platform</text>
+</svg>

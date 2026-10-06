@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+  <title id="t">Tranquil scene video pipeline</title>
+  <desc id="d">A scene opens by looping a bundled fallback clip at once, resolves a catalogue clip, downloads it through a priority queue to a temporary file, plays it, prefetches the next clip and advances when ready. Apple TV swaps between two players with a crossfade.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050a16"/>
+      <stop offset="1" stop-color="#0c1a2e"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e6f4f7; }
+      .h { font-size: 26px; font-weight: 700; }
+      .k { font-size: 13px; fill: #7fd8e6; letter-spacing: 1.5px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .s { font-size: 13px; fill: #a9c4cc; }
+      .st { fill: #12253f; stroke: #5b8fd6; stroke-width: 1.5; }
+      .ok { fill: #0b2f3a; stroke: #22c7d9; stroke-width: 1.5; }
+      .fb { fill: #36230f; stroke: #e8923a; stroke-width: 1.5; }
+      .atv { fill: #251a45; stroke: #9a7cf0; stroke-width: 1.5; }
+      .arrow { stroke: #5b8fd6; stroke-width: 2; fill: none; marker-end: url(#a); }
+      .dash { stroke: #e8923a; stroke-width: 2; fill: none; stroke-dasharray: 6 4; marker-end: url(#b); }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b8fd6"/></marker>
+    <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#e8923a"/></marker>
+  </defs>
+  <rect width="1200" height="600" rx="16" fill="url(#bg)"/>
+  <text x="40" y="50" class="h">Never a black frame: the scene video pipeline</text>
+  <text x="40" y="76" class="s">Flutter apps (Mobile and TV) cache clips on disk; the Apple TV app streams clips and crossfades between two players.</text>
+
+  <rect x="40" y="110" width="250" height="90" rx="10" class="fb"/>
+  <text x="58" y="136" class="k">1 · OPEN SCENE</text>
+  <text x="58" y="162" class="b">Bundled fallback clip loops</text>
+  <text x="58" y="182" class="b">immediately, before any await</text>
+
+  <rect x="335" y="110" width="250" height="90" rx="10" class="st"/>
+  <text x="353" y="136" class="k">2 · RESOLVE</text>
+  <text x="353" y="162" class="b">Pick a clip id from the</text>
+  <text x="353" y="182" class="b">scene's category playlist</text>
+
+  <rect x="630" y="110" width="250" height="90" rx="10" class="st"/>
+  <text x="648" y="136" class="k">3 · LOOK UP</text>
+  <text x="648" y="162" class="b">Ask the catalogue API for</text>
+  <text x="648" y="182" class="b">an HD MP4 rendition</text>
+
+  <rect x="925" y="110" width="235" height="90" rx="10" class="st"/>
+  <text x="943" y="136" class="k">4 · DOWNLOAD</text>
+  <text x="943" y="162" class="b">Priority queue, temp file,</text>
+  <text x="943" y="182" class="b">rename when complete</text>
+
+  <path d="M290 155 L335 155" class="arrow"/>
+  <path d="M585 155 L630 155" class="arrow"/>
+  <path d="M880 155 L925 155" class="arrow"/>
+
+  <rect x="925" y="260" width="235" height="90" rx="10" class="ok"/>
+  <text x="943" y="286" class="k">5 · PLAY</text>
+  <text x="943" y="312" class="b">Swap the cached clip in</text>
+  <text x="943" y="332" class="b">for the fallback</text>
+
+  <rect x="630" y="260" width="250" height="90" rx="10" class="ok"/>
+  <text x="648" y="286" class="k">6 · PREFETCH</text>
+  <text x="648" y="312" class="b">Fetch the next clip while</text>
+  <text x="648" y="332" class="b">the current one plays</text>
+
+  <rect x="335" y="260" width="250" height="90" rx="10" class="ok"/>
+  <text x="353" y="286" class="k">7 · ADVANCE</text>
+  <text x="353" y="312" class="b">On clip end, move to the</text>
+  <text x="353" y="332" class="b">prefetched clip</text>
+
+  <rect x="40" y="260" width="250" height="90" rx="10" class="fb"/>
+  <text x="58" y="286" class="k">IF NEXT IS NOT READY</text>
+  <text x="58" y="312" class="b">Loop the current clip, retry the</text>
+  <text x="58" y="332" class="b">prefetch, advance when ready</text>
+
+  <path d="M1042 200 L1042 260" class="arrow"/>
+  <path d="M925 305 L880 305" class="arrow"/>
+  <path d="M630 305 L585 305" class="arrow"/>
+  <path d="M335 305 L290 305" class="dash"/>
+  
+  <rect x="40" y="400" width="1120" height="170" rx="10" class="atv"/>
+  <text x="58" y="428" class="k">APPLE TV VARIANT</text>
+  <text x="58" y="456" class="b">Two muted AVPlayers sit in one container view, each with its own layer. A new clip starts on the idle player,</text>
+  <text x="58" y="480" class="b">the active side flips, and a 1.2 second opacity animation crossfades the layers; the old player is then emptied.</text>
+  <text x="58" y="504" class="b">The shuffled playlist prefetches the next URL while a clip plays; if every fetch fails, the bundled MP4 keeps looping.</text>
+  <text x="58" y="540" class="s">The Flutter apps fall back to the bundled clip too; between clips they hold the last frame while the next player initialises.</text>
+</svg>

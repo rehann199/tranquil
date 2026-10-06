@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+  <title id="t">Tranquil layered architecture</title>
+  <desc id="d">Layers common to every Tranquil app: input and focus layer, state layer, services, platform bridges, and external services such as the store, a video catalogue API, Firebase and an ad network.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050a16"/>
+      <stop offset="1" stop-color="#0c1a2e"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e6f4f7; }
+      .h { font-size: 26px; font-weight: 700; }
+      .k { font-size: 13px; fill: #7fd8e6; letter-spacing: 1.5px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .s { font-size: 13px; fill: #a9c4cc; }
+      .l1 { fill: #0b2f3a; stroke: #22c7d9; stroke-width: 1.5; }
+      .l2 { fill: #12253f; stroke: #5b8fd6; stroke-width: 1.5; }
+      .l3 { fill: #1d2347; stroke: #8a86e8; stroke-width: 1.5; }
+      .l4 { fill: #36230f; stroke: #e8923a; stroke-width: 1.5; }
+      .ext { fill: #1a1d24; stroke: #7a8594; stroke-width: 1.5; stroke-dasharray: 6 4; }
+      .arrow { stroke: #5b8fd6; stroke-width: 2; fill: none; marker-end: url(#a); }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5b8fd6"/></marker>
+  </defs>
+  <rect width="1200" height="700" rx="16" fill="url(#bg)"/>
+  <text x="40" y="50" class="h">Layers every Tranquil app implements</text>
+  <text x="40" y="76" class="s">The layers match across Flutter and SwiftUI; the implementations in each box are platform-specific.</text>
+
+  <rect x="40" y="100" width="1120" height="104" rx="10" class="l1"/>
+  <text x="58" y="126" class="k">INPUT AND FOCUS</text>
+  <text x="58" y="152" class="b">Mobile: tab shell, touch targets, mini player, bottom sheets</text>
+  <text x="58" y="176" class="b">TV: focus nodes and traversal, select / back / media keys; Apple TV: native focus engine and focus sections</text>
+  <text x="58" y="196" class="s">Landscape-locked playback screen on both Mobile and TV</text>
+
+  <rect x="40" y="224" width="1120" height="84" rx="10" class="l2"/>
+  <text x="58" y="250" class="k">STATE</text>
+  <text x="58" y="276" class="b">Flutter: Provider objects for app state, playback, billing, scenes, connectivity, locale</text>
+  <text x="58" y="298" class="b">SwiftUI: observable view models and a settings singleton backed by UserDefaults; Flutter persists to SharedPreferences</text>
+
+  <rect x="40" y="328" width="1120" height="124" rx="10" class="l3"/>
+  <text x="58" y="354" class="k">SERVICES</text>
+  <text x="58" y="380" class="b">Content catalogue: scenes, sounds, bundles, time-of-day suggestions · Sleep timer · Entitlements and rewarded access</text>
+  <text x="58" y="404" class="b">Video pipeline: catalogue lookup, download queue, prefetch, fallback clip · Notifications · Analytics guard and throttle</text>
+  <text x="58" y="428" class="b">Store billing abstraction: one interface, a different implementation per store</text>
+  <text x="58" y="446" class="s">Mobile also has remote ad kill switches and an ads-first startup gate</text>
+
+  <rect x="40" y="472" width="1120" height="84" rx="10" class="l4"/>
+  <text x="58" y="498" class="k">PLATFORM BRIDGES</text>
+  <text x="58" y="524" class="b">Audio session + media session (Mobile) · Kotlin billing managers over method and event channels (Android TV, Fire TV, Android Mobile)</text>
+  <text x="58" y="546" class="b">StoreKit 2 and AVFoundation (Apple TV) · AVPlayerLayer and UIKit press capture wrapped for SwiftUI</text>
+
+  <rect x="40" y="590" width="270" height="78" rx="10" class="ext"/>
+  <text x="58" y="618" class="k">STORES</text>
+  <text x="58" y="644" class="b">Google Play · Amazon Appstore</text>
+  <text x="58" y="660" class="b">App Store</text>
+  <rect x="330" y="590" width="270" height="78" rx="10" class="ext"/>
+  <text x="348" y="618" class="k">VIDEO CATALOGUE</text>
+  <text x="348" y="644" class="b">Stock footage API, HD MP4</text>
+  <rect x="620" y="590" width="270" height="78" rx="10" class="ext"/>
+  <text x="638" y="618" class="k">FIREBASE (NOT IN FIRE TV)</text>
+  <text x="638" y="644" class="b">Analytics, Crashlytics</text>
+  <text x="638" y="660" class="b">Messaging, Firestore (Mobile)</text>
+  <rect x="910" y="590" width="250" height="78" rx="10" class="ext"/>
+  <text x="928" y="618" class="k">AD NETWORKS</text>
+  <text x="928" y="644" class="b">Mediation SDK (Mobile)</text>
+  <text x="928" y="660" class="b">Unity Ads (Google TV build)</text>
+
+  <path d="M755 556 L755 590" class="arrow"/>
+  <path d="M175 556 L175 590" class="arrow"/>
+  <path d="M1035 556 L1035 590" class="arrow"/>
+  <path d="M465 556 L465 590" class="arrow"/>
+</svg>
