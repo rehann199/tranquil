@@ -14,6 +14,8 @@ Flutter · Dart · SwiftUI · Kotlin · StoreKit 2 · Play Billing · Amazon IAP
 ![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)
 ![Android TV](https://img.shields.io/badge/Android%20TV-D9822B?logo=androidtv&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black)
+![Downloads](https://img.shields.io/badge/Google%20Play-5K%2B%20downloads-3DDC84?logo=googleplay&logoColor=white)
+![For sale](https://img.shields.io/badge/Product-For%20sale-7C4DFF)
 
 <img src="assets/screenshots/tranquil-mobile-home.webp" width="230" alt="Mobile home screen with a recommended scene and an experience grid" />
 &nbsp;&nbsp;&nbsp;
@@ -44,6 +46,15 @@ Every platform below was checked against the production projects. A store badge 
 | **Android TV** | Verified | Flutter TV project, `androidtv` flavor, Leanback launcher and banner, touchscreen not required, landscape | Verified on Google Play |
 | **Fire TV** | Verified build target | Same TV project, `firetv` flavor with its own package, Leanback-only launcher, Amazon IAP receiver and its own banner | Not supplied |
 | **Apple TV** | Verified | Separate native SwiftUI project, tvOS 17 deployment target, tvOS device family, brand assets with top-shelf images | Listed on the App Store |
+
+<!-- fw-sale:start -->
+## Reach & Availability
+
+| | |
+|---|---|
+| **Google Play downloads** | **5K+** (the count shown on the Play listing) |
+| **Product sale** | This is a Future Watch product and it is **available to buy or license** for your own business. [Ask about buying Tranquil](https://futurewatch.co/contact?type=product&ref=tranquil) or email [rehan@futurewatch.co](mailto:rehan@futurewatch.co). |
+<!-- fw-sale:end -->
 
 ## Product at a Glance
 
